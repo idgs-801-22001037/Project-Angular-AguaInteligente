@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.hoverCardInfo{
+    transition: all 0.3s ease-in-out;
+}
+.hoverCardInfo:hover{
+    background-color: #e9ecef;
+}
+    /* You can add global styles to this file, and also import other style files */

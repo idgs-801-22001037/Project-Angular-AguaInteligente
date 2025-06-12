@@ -1,0 +1,35 @@
+<div id="carouselExampleControls" class="carousel slide rounded shadow mb-3w" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div *ngFor="let item of infoCarrusel; let i = index">
+            @if (i==0) {
+
+            <div class="carousel-item active">
+
+                <img src="{{item.src}}" class="d-block w-100 " alt=" {{item.alt}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="">{{item.title}}</h5>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+            }
+            @else {
+            <div class="carousel-item">
+                <img src="{{item.src}}" class="d-block w-100" alt=" {{item.alt}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="">{{item.title}}</h5>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>

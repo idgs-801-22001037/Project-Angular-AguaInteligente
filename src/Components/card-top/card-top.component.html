@@ -1,0 +1,14 @@
+<div class="card shadow">
+    <div  [ngClass]="'card-img-top ' + claseExtraCardHeader">
+        <ng-content select="[card-header]"></ng-content>
+        
+    </div>
+    <div class="card-body" [ngClass]="'card-body '+claseExtraCardBody">
+        <h2 class=" h1" [ngClass]="claseTitulo1">{{titulo1}}</h2>
+        <h1 class="card-title " [ngClass]="claseTitulo2">{{titulo2}}</h1>
+        <p class="card-text">{{textoCard}}</p>
+
+        <ng-content select="[card-footer]"></ng-content>
+        
+    </div>
+</div>

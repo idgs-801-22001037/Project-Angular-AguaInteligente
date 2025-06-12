@@ -1,0 +1,21 @@
+
+<div [ngClass]="'card ' + claseExtraCard">
+
+
+    <div [ngClass]="'row g-0'+ claseExtraTop">
+        <div [ngClass]="'col-md-4 '+claseExtraTopImg">
+            <ng-content select="[card-left]"></ng-content>
+        </div>
+
+        <div class="col-md-8">
+            <div [ngClass]="'card-body '+claseExtraBody">
+                <h5 class="card-title " [ngClass]="'card-title '+claseExtraTitlo ">{{titulo1}}</h5>
+                <p [ngClass]="'card-text ' + claseExtraText">{{texto}}</p>
+                <ng-content select="[card-right]"></ng-content>
+                <ng-content select="[card-footer]"></ng-content>
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,49 +1,121 @@
-<div class="row bg-light p-3 shadow ">
-    <div class="col-md-6 col-sm-12 p-2">
-        <div class="d-flex align-items-center justify-content-start">
-            <img src="/img/logo.png" alt="Logo-img" class="img-fluid" style="height: 100px;">
-            <h1 class="fw-semibold ms-2">Agua-Inteligente</h1>
+<app-header>
+    <app-btn-enlace claseExtra="btn-outline-success" url="login" icono="bi bi-box-arrow-in-right" />
+</app-header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 p-0 m-0" data-aos="fade-right">
+            <div class="p-4">
+
+                <app-card-top titulo1="Conocenos" claseTitulo1="fw-semibold" titulo2="Agua inteligente"
+                    claseTitulo2="text-primary fw-bold" textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, in? Eos
+            error vitae mollitia, possimus harum impedit autem ipsum. Odit alias labore, ex voluptatibus
+            aspernatur iusto nisi facilis tempore eos."
+                    claseExtraCardHeader="d-flex align-items-center justify-content-center shadow rounded-5"
+                    claseExtraCardBody="">
+
+                    <ngx-charts-pie-grid card-header [view]="view" [scheme]="colorScheme" [results]="single"
+                        (select)="onSelect($event)">
+                    </ngx-charts-pie-grid>
+
+                    <app-btn-enlace card-footer claseExtra="btn-outline-primary" url="login"
+                        icono="bi bi-person-lines-fill" />
+                </app-card-top>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 col-sm-12 p-4 m-0" data-aos="fade-left">
+            <app-card-left claseExtraTopImg="d-flex align-items-center justify-content-center" claseExtraBody="shadow"
+                claseExtraCard="d-flex align-items-center justify-content-center h-100 shadow p-3"
+                claseExtraTop="w-100">
+                <ngx-charts-bar-vertical [view]="view2" [scheme]="colorScheme" [results]="single" [gradient]="false"
+                    [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" (select)="onSelect($event)" card-left>
+                </ngx-charts-bar-vertical>
+
+                <app-carrusel card-right [infoCarrusel]="carrusel"></app-carrusel>
+                <app-btn-enlace card-footer claseExtra="btn-success mt-2" url="login"
+                    icono="bi bi-info-circle"></app-btn-enlace>
+
+            </app-card-left>
         </div>
     </div>
-    <div class="col-md-6 col-sm-12">
-        <div class="d-flex align-items-center justify-content-end h-100 me-4">
-            <button class="btn btn-outline-success">
-                <i class="bi bi-box-arrow-in-right"></i> Ingresar
-            </button>
+
+    <div class="row mt-2 rounded">
+        <div class="col-md-4 col-sm-12">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <img src="/img/ecolo.png" alt="ecologia" class="img-fluid" style="height: 200px;">
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="row">
+                <!-- Tarjeta de Ecología Sustentable -->
+                <div class="col-md-6 col-sm-12 mb-4" data-aos="zoom-out-down">
+
+
+                    <div data-aos="zoom-out-down">
+
+                        <app-card-left claseExtraTop="shadow p-2 " claseExtraTopImg="align-items-center" texto=" Promovemos prácticas sostenibles para cuidar el planeta: energía solar, reciclaje y
+                        uso responsable del agua." titulo1="Ecológico"
+                            claseExtraTopImg="d-flex align-items-center justify-content-center"
+                            animacion="zoom-out-down">
+                            <i class="bi bi-tree fs-1 text-success" card-left></i>
+                        </app-card-left>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Estadísticas Económicas -->
+                <div class="col-md-6 col-sm-12 mb-4" data-aos="zoom-out-down">
+                     <app-card-left claseExtraTop="shadow p-2" claseExtraTopImg="align-items-center" texto=" Promovemos prácticas sostenibles para cuidar el planeta: energía solar, reciclaje y
+                        uso responsable del agua." titulo1="Ecológico"
+                            claseExtraTopImg="d-flex align-items-center justify-content-center"
+                            animacion="zoom-out-down">
+                            <i class="bi bi-bar-chart-line text-primary fs-1" card-left></i>
+                        </app-card-left>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Tarjeta de Ecología Sustentable -->
+                <div class="col-md-6 col-sm-12 mb-4" data-aos="zoom-out-down">
+
+                        <app-card-left claseExtraTop="shadow p-2" claseExtraTopImg="align-items-center" texto=" Promovemos prácticas sostenibles para cuidar el planeta: energía solar, reciclaje y
+                        uso responsable del agua." titulo1="Ecológico"
+                            claseExtraTopImg="d-flex align-items-center justify-content-center"
+                            animacion="zoom-out-down">
+                            <i class="bi bi-tree fs-1 text-success" card-left></i>
+                        </app-card-left>
+                </div>
+
+                <!-- Tarjeta de Estadísticas Económicas -->
+                <div class="col-md-6 col-sm-12 mb-4" data-aos="zoom-out-down">
+                     <app-card-left claseExtraTop="shadow p-2" claseExtraTopImg="align-items-center" texto=" Promovemos prácticas sostenibles para cuidar el planeta: energía solar, reciclaje y
+                        uso responsable del agua." titulo1="Ecológico"
+                            claseExtraTopImg="d-flex align-items-center justify-content-center"
+                            animacion="zoom-out-down">
+                            <i class="bi bi-bar-chart-line text-primary fs-1" card-left></i>
+                        </app-card-left>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            <ngx-charts-pie-grid 
-                [view]="view" 
-            [scheme]="colorScheme" 
-            [results]="single" (select)="onSelect($event)">
-            </ngx-charts-pie-grid>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+                <img src="/img/logo.png" alt="logo" class="img-fluid" style="height: 50px;">
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span>
         </div>
-        <div class="col-md-6 col-sm-12">
-            <ngx-charts-advanced-pie-chart
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="single"
-  [gradient]="gradient"
-  (select)="onSelect($event)"
-  (activate)="onActivate($event)"
-  (deactivate)="onDeactivate($event)"
-  >
-</ngx-charts-advanced-pie-chart>
-        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" routerLink="" aria-label="Instagram">
+                    <i class="bi bi-facebook fs-4 text-primary"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-body-secondary" routerLink="" aria-label="Facebook">
+                    <i class="bi bi-whatsapp fs-4 text-success"></i></a></li>
 
-        <ngx-charts-bar-vertical
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="single"
-  [gradient]="gradient"
-  (deactivate)="onDeactivate($event)">
-            
-        </ngx-charts-bar-vertical>
-    </div>
+        </ul>
+    </footer>
 </div>
